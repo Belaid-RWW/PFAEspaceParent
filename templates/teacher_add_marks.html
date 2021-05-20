@@ -1,0 +1,126 @@
+{% extends 'school/teacherbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+<head>
+    <meta charset="utf-8">
+  
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+  
+    <style type="text/css" media="screen">
+      a:link {
+        text-decoration: none;
+      }
+      a:link {
+      text-decoration: none;
+    }
+
+    .note {
+      text-align: center;
+      height: 80px;
+      background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+      color: #fff;
+      font-weight: bold;
+      line-height: 80px;
+    }
+
+    .form-content {
+      padding: 5%;
+      border: 1px solid #ced4da;
+      margin-bottom: 2%;
+    }
+
+    .form-control {
+      border-radius: 1.5rem;
+    }
+
+    .btnSubmit {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 1%;
+      width: 20%;
+      cursor: pointer;
+      background: #0062cc;
+      color: #fff;
+    }
+  
+      h6 {
+        color: white;
+      }
+  
+      .order-card {
+        color: #fff;
+      }
+  
+      .bg-c-blue {
+        background: linear-gradient(45deg, #4099ff, #73b4ff);
+      }
+  
+      .bg-c-green {
+        background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+      }
+  
+      .bg-c-yellow {
+        background: linear-gradient(45deg, #FFB64D, #ffcb80);
+      }
+  
+      .bg-c-pink {
+        background: linear-gradient(45deg, #FF5370, #ff869a);
+      }
+  
+  
+      .card {
+        border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        border: none;
+        margin-bottom: 30px;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+  
+      .card .card-block {
+        padding: 25px;
+      }
+  
+      .order-card i {
+        font-size: 26px;
+      }
+  
+      .f-left {
+        float: left;
+      }
+  
+      .f-right {
+        float: right;
+      }
+    </style>
+  </head>
+  
+  <form action="" method="POST">
+    {% csrf_token %}
+    <div class="container register-form">
+        <div class="form">
+            <div class="note">
+                <p>Ajouter une note</p>
+            </div>
+            <div class="form-content">
+                <div class="row">
+                  <div class="col-md-16">
+                      <div class="form-group">
+                      {{form}}
+                    </div>
+                  </div>
+                </div>
+            <button type="submit" class="btnSubmit" style="margin-left:400px;">Valider</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+{% endblock content %}
+

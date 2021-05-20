@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, intial-scale=1.0">
+  <title></title>
+
+  <style media="screen">
+    .jumbotron {
+      margin-bottom: 0px;
+      background-size:contain;
+      background-repeat: no-repeat;
+      margin-left: 45px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+
+
+
+    .glow {
+      font-size: 70px;
+      color: #ffffff;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+      }
+
+      to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }
+    }
+
+.main{
+width:100%;
+margin-top: -150px;
+height:768px;
+position: relative;
+}
+.logo img{
+height: 80px;
+}
+.home-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  width:65%;
+
+}
+.home-img{
+  width:500px;
+  height:400px;
+  margin:20px;
+}
+.home-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.home-text{
+  width:500px;
+  margin: 20px;
+}
+.home-text h1{
+  font-size: 3rem;
+  line-height: 55px;
+  color:#22252e;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0px;
+}
+.home-text p{
+  font-size: 1rem;
+  color:#777474;
+  margin-top:20px;
+  text-align:left;
+}
+.home-text span{
+  color: #683cb4;
+  text-decoration: underline;
+}
+.main-login{
+  width:170px;
+  height:40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #683cb4;
+  color:#fff;
+  box-shadow: 5px 10px 30px (#683cb4);
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
+  margin-top:30px;
+  margin-left:120px;
+}
+.main-login:hover{
+  background-color: #683cb4;
+  transition: all ease 0.3s;
+}
+
+.services{
+  background-size: 1000px;
+  background-position: center;
+  margin-top: -200px;
+}
+.services-heading{
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.services-heading h2{
+  line-height: 55px;
+  font-size: 2.2rem;
+  color:#22252e;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0px;
+}
+.services-heading p{
+  font-size: 1rem;
+  color:#777474;
+  width:50%;
+}
+.box-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 30px;
+}
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:300px;
+  height: 420px;
+  text-align: center;
+  box-shadow: 2px 2px 20px rgba(90,118,253,0.15);
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 20px;
+  flex-grow: 1;
+}
+.box img{
+  height:130px;
+  margin:10px;
+}
+.box font{
+  font-size: 1rem;
+  color: #22252e;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.box p{
+  font-size: 1rem;
+  color: #777474;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 500px;
+}
+.box a{
+  width:150px;
+  height:40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #683cb4;
+  text-transform: uppercase;
+  margin: auto;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color:#683cb4;
+  margin:0px;
+}
+.box a:hover{
+  background-color: #683cb4;
+  color:#fff;
+  box-shadow: 5px 10px 30px #683cb4;
+  transition: all ease 0.3s;
+}
+
+.box{
+  width:160px;
+  height: 420px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  position: relative;
+}
+  </style>
+
+</head>
+
+<body>
+  {% include "school/navbar.html" %}
+  <br>
+  <br>
+  <div>
+    <br>
+
+    <section class="main">
+      <!--main-content-->
+      <div class="home-content">
+          <!--text-->
+          <div class="home-text">
+              <h1>Votre Espace de <span>Sécurité</span> Parentale</h1>
+              <p>Construisez une relation de confiance entre les parents et enseignants. <br>
+                  Une relation qui est en fait l’objet d’une question centrale pour toutes les établissements
+                  scolaires afin de donner plus du sens à l’école.</p>
+          <!--login-btn-->
+          <a href="https://www.espita.ens.tn/" class="main-login" target="_blank">Explorez l'école</a>
+          </div>
+          <!--img-->
+          <div class="home-img">
+            <img src={% static "a.jpg" %}>
+          </div>
+      </div>
+
+  </section>
+
+  <section class="services">
+    <!--heading----------->
+    <div class="services-heading">
+        <h2>Services Disponibles</h2>
+        <p>Vous trouverez ici les services que vous pouvez profiter</p>
+    </div>
+    <!--box-container----------------->
+    <div class="box-container">
+
+        <!--box-1-------->
+        <div class="box">
+          <img src={% static "emploi.jpg" %}>
+            <font>Emplois du Temps</font>
+            <p>Vous trouverez ici les emplois du temps et ces mis à jours s'il existent.</p>
+            <!--btn--------->
+        </div>
+
+        <!--box-2-------->
+        <div class="box">
+          <img src={% static "results.jpg" %}>
+            <font>Résultats</font>
+            <p>Vous trouverez ici les notes de votre enfant.</p>
+            <!--btn--------->
+        </div>
+
+        <!--box-3-------->
+        <div class="box">
+          <img src={% static "retard.jpg" %}>
+            <font>Absences/Retards</font>
+            <p>Vous trouverez ici les absences et les retards de votre enfant.</p>
+            <!--btn--------->
+        </div>
+
+        <!--box-4-------->
+    <div class="box">
+      <img src={% static "punitions.jpg" %}>
+          <font>Punitions</font>
+          <p>Vous trouverez ici les punitions appliquées durant l'année scolaire en cours.</p>
+          <!--btn--------->
+    </div>
+
+        <div class="box">
+          <img src={% static "fees.jpg" %}>
+          <font>Payement en Ligne</font>
+          <p>Vous pouvez payer les frais de scolarité de votre enfant en ligne.</p>
+          <!--btn--------->
+        </div>
+
+        <div class="box">
+          <img src={% static "meeting.jpg" %}>
+          <font>Prise RDV</font>
+          <p>Vous pouvez plannifier un rendez-vous avec un professeur/adminisratif.</p>
+          <!--btn--------->
+        </div>
+    </div>
+</section>
+
+  </div>
+
+  <br>
+  <br>
+  <br><br>
+
+  {% include "school/admin_teacher_student_card.html" %}
+
+  <br><br>
+  <br>
+  <br>
+  <br>
+  <br>
+  {% include "school/footer.html" %}
+</body>
+
+</html>
